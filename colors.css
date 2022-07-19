@@ -1,0 +1,16 @@
+:root {
+    --dark-clr: #2e3440;
+    --dark-alt-clr: #344;
+    --dark-accent-clr: #3b4252;
+    --dark-hov-clr: #434c5e;
+    --dark-border-clr: #4c566a;
+    --font-clr: #e5e9f0;
+    --font-alt-clr: #d8dee9;
+    --accent-clr: #88c0d0;
+    --accent-clr-alpha: #3b4252a7;
+    --accent-hov-clr: #81a1c1;
+    --accent-red: #ff9b85;
+    --accent-green: #a3be8c;
+    --accent-yellow: #ebcb8b;
+    scroll-behavior: smooth;
+}

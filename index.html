@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Welcome</title>
+		<style>
+			svg {
+				position: fixed;
+				z-index: -4000;
+			}
+			main#loader {
+				position: fixed;
+				background: var(--dark-clr);
+				top: 0;
+				left: 0;
+				height: 100vh;
+				width: 100%;
+				z-index: 9999999999999999;
+				transform: translateY(0);
+				transition: 500ms ease transform;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			main#loader .box-cont {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+				animation: 1s rotate ease-in-out infinite;
+				filter: url(#liquid);
+				-webkit-filter: url(#liquid);
+			}
+
+			main#loader .box-cont .box {
+				height: 75px;
+				width: 75px;
+				border: none;
+				border-radius: 50%;
+				background: var(--accent-clr);
+				position: absolute;
+			}
+
+			main#loader .box-cont .box.box-1 {
+				animation: 1s loader-1 ease-in-out infinite alternate-reverse;
+			}
+
+			main#loader .box-cont .box.box-2 {
+				animation: 1s loader-2 ease-in-out infinite alternate-reverse;
+			}
+
+			main#loader .box-cont .box.box-3 {
+				animation: 1s loader-3 ease-in-out infinite alternate-reverse;
+			}
+
+			main#loader .box-cont .box.box-4 {
+				animation: 1s loader-4 ease-in-out infinite alternate-reverse;
+			}
+
+			@keyframes loader-1 {
+				0% {
+					transform: translate(0px, 0px);
+				}
+				100% {
+					transform: translate(0, -150px);
+				}
+			}
+
+			@keyframes loader-2 {
+				0% {
+					transform: translate(0px, 0px);
+				}
+				100% {
+					transform: translate(150px, 0px);
+				}
+			}
+			@keyframes loader-3 {
+				0% {
+					transform: translate(0px, 0px);
+				}
+				100% {
+					transform: translate(0px, 150px);
+				}
+			}
+			@keyframes loader-4 {
+				0% {
+					transform: translate(0px, 0px);
+				}
+				100% {
+					transform: translate(-150px, 0px);
+				}
+			}
+
+			@keyframes rotate {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(90deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<defs>
+				<filter id="liquid">
+					<feGaussianBlur
+						in="SourceGraphic"
+						stdDeviation="10"
+						result="blur"
+					/>
+					<feColorMatrix
+						in="blur"
+						mode="matrix"
+						values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+						result="liquid"
+					/>
+				</filter>
+			</defs>
+		</svg>
+		<main id="loader">
+			<!-- <span class="text">Loading</span> -->
+			<div class="box-cont">
+				<div class="box box-1"></div>
+				<div class="box box-2"></div>
+				<div class="box box-3"></div>
+				<div class="box box-4"></div>
+			</div>
+		</main>
+		<nav>
+			<a href="#home" class="links active home">
+				<i class="bx bxs-home"></i>
+				<span class="tooltip">Home</span>
+			</a>
+			<a href="#portfolio" class="links portfolio">
+				<i class="bx bxs-dashboard"></i>
+				<span class="tooltip">Portfolio</span>
+			</a>
+			<a href="#services" class="links services">
+				<i class="bx bxs-gift"></i>
+				<span class="tooltip">Services</span>
+			</a>
+			<a href="#contact" class="links contact">
+				<i class="bx bxs-message-square-dots"></i>
+				<span class="tooltip">Contact</span>
+			</a>
+			<span class="highlighter-elem"></span>
+		</nav>
+		<section id="home">
+			<div class="left-cont">
+				<span class="fade item tier-1">Hi there, </span>
+				<span class="fade item tier-1">We are </span>
+				<br />
+				<span class="fade item accent">Example Brand,</span>
+				<br />
+				<span class="fade item tier-2"
+					>And We are here to <span class="accent">help!</span></span
+				>
+				<br />
+				<a href="#contact" class="fade item hire_me"
+					><span>Let's Talk</span></a
+				>
+			</div>
+		</section>
+		<section id="portfolio">
+			<div class="card-cont">
+				<div class="card wide">
+					<div class="img-cont">Image Here</div>
+					<div class="caption-cont">
+						<h1 class="heading">Lorem, ipsum.</h1>
+						<span class="hr"></span>
+						<span class="desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Tempora itaque laborum ipsam similique,
+							voluptates voluptate soluta in, aut corporis earum
+							illo enim repudiandae ex sunt nostrum odio esse
+							modi, dolor fugiat quisquam.</span
+						>
+					</div>
+				</div>
+				<div class="card">
+					<div class="img-cont">Image Here</div>
+					<div class="caption-cont">
+						<h1 class="heading">Lorem, ipsum.</h1>
+						<span class="hr"></span>
+						<span class="desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Tempora itaque laborum ipsam similique,
+							voluptates voluptate soluta in, aut corporis earum
+							illo enim repudiandae ex sunt nostrum odio esse
+							modi, dolor fugiat quisquam.</span
+						>
+					</div>
+				</div>
+				<div class="card">
+					<div class="img-cont">Image Here</div>
+					<div class="caption-cont">
+						<h1 class="heading">Lorem, ipsum.</h1>
+						<span class="hr"></span>
+						<span class="desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Tempora itaque laborum ipsam similique,
+							voluptates voluptate soluta in, aut corporis earum
+							illo enim repudiandae ex sunt nostrum odio esse
+							modi, dolor fugiat quisquam.</span
+						>
+					</div>
+				</div>
+				<div class="card wide">
+					<div class="img-cont">Image Here</div>
+					<div class="caption-cont">
+						<h1 class="heading">Lorem, ipsum.</h1>
+						<span class="hr"></span>
+						<span class="desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Tempora itaque laborum ipsam similique,
+							voluptates voluptate soluta in, aut corporis earum
+							illo enim repudiandae ex sunt nostrum odio esse
+							modi, dolor fugiat quisquam.</span
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services">
+			<div class="plan-cont">
+				<div class="plan basic">
+					<div class="top-cont">
+						<h1 class="plan-name">Basic</h1>
+					</div>
+					<div class="center-cont">
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Site Design</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Security Updates</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">5k views/day</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">50GB Storage</span>
+						</div>
+					</div>
+					<div class="bottom-cont">
+						<span class="buy-btn">$9.99/month</span>
+					</div>
+				</div>
+				<div class="plan business">
+					<div class="top-cont">
+						<h1 class="plan-name">Business</h1>
+					</div>
+					<div class="center-cont">
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Site Design</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Security Updates</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Site Maintenance</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Performance Optimization</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Unlimited views</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">250GB Storage</span>
+						</div>
+					</div>
+					<div class="bottom-cont">
+						<span class="buy-btn">$49.99/month</span>
+					</div>
+				</div>
+				<div class="plan enterprise accent">
+					<div class="top-cont">
+						<h1 class="plan-name">Enterprise</h1>
+					</div>
+					<div class="center-cont">
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Site Design</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Security Updates</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Site Maintenance</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Performance Optimization</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Unlimited views</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">1TB Storage</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">Zero Downtime</span>
+						</div>
+						<div class="item">
+							<i class="bx bx-check-double"></i>
+							<span class="desc">No Bots</span>
+						</div>
+					</div>
+					<div class="bottom-cont">
+						<span class="buy-btn">$99.99/month</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<h1>We Are Always Here</h1>
+			<div class="form">
+				<div class="top-bar">
+					<span class="btn back-btn">Back</span>
+					<span class="btn next-btn">Next</span>
+				</div>
+				<div class="center-cont">
+					<div class="slides-cont" style="transform: translateX(0%);">
+						<div class="slide slide-message">
+							<textarea name="message" placeholder="Please Leave your message here..." tabindex="-1"></textarea>
+						</div>
+						<div class="slide slide-details">
+							<div class="name">
+								<input
+									type="text"
+									name="name"
+									placeholder=" "
+									autocapitalize="off"
+									autocomplete="off"
+									spellcheck="false"
+									tabindex="0"
+								/>
+								<label
+									for="name"
+									onclick="this.parentElement.querySelector('input').focus()"
+									>Name</label
+								>
+							</div>
+							<div class="email">
+								<input
+									type="text"
+									name="email"
+									placeholder=" "
+									autocapitalize="off"
+									autocomplete="off"
+									spellcheck="false"
+									tabindex="1"
+								/>
+								<label
+									for="email"
+									onclick="this.parentElement.querySelector('input').focus()"
+									>Email</label
+								>
+							</div>
+							<div class="company">
+								<input
+									type="text"
+									name="company"
+									placeholder=" "
+									autocapitalize="off"
+									autocomplete="off"
+									spellcheck="false"
+									tabindex="2"
+								/>
+								<label
+									for="company"
+									onclick="this.parentElement.querySelector('input').focus()"
+									>Company</label
+								>
+							</div>
+						</div>
+						<div class="slide slide-message"></div>
+					</div>
+				</div>
+				<div class="bottom-cont">
+						<span class="progress-cont">
+							<span class="progress-bar"></span>
+						</span>
+				</div>
+			</div>
+		</section>
+	</body>
+	<script src="./app.js" defer></script>
+</html>
