@@ -1,5 +1,8 @@
 const highlighterElem = document.querySelector('nav .highlighter-elem');
 const menuItems = document.querySelectorAll('nav a.links');
+const navSections = document.getElementsByTagName('section');
+
+document.addEventListener('scroll', scrollObserver);
 
 function scrollObserver() {
 	let current = 'home';
@@ -14,5 +17,3 @@ function scrollObserver() {
 		}
 	});
 }
-
-window.addEventListener('scroll', scrollObserver);
