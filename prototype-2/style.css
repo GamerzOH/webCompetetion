@@ -111,7 +111,7 @@ body {
 		transform: translateY(0px);
 	}
 
-	nav a.links.portfolio.active ~ span.highlighter-elem {
+	nav a.links.why-us.active ~ span.highlighter-elem {
 		background: var(--accent-red);
 		transform: translateY(calc(64px + 10px));
 	}
@@ -138,7 +138,8 @@ section#home {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
+	justify-content: space-evenly;
+	gap: 50px;
     padding: 120px;
     background-color: var(--dark-clr);
 }
@@ -166,6 +167,7 @@ section#home .left-cont h1.title {
 
 section#home .left-cont .content {
 	font-size: 2.15em;
+	text-align: center;
 }
 
 section#home .left-cont a.hire-me {
@@ -274,4 +276,80 @@ section#home .left-cont .btn-cont a.btn:not(.accent):hover {
 
 section#home .left-cont .btn-cont a.btn.accent:hover {
 	background-color: var(--accent-hov-clr);
+}
+
+section#home .right-cont {
+	height: 300px;
+	aspect-ratio: 16 / 9;
+}
+
+section#home .right-cont .mobile-wrapper {
+	background-color: var(--dark-clr);
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 5px solid var(--accent-clr);
+	border-radius: 16px;
+	overflow: hidden;
+	transform: rotate(0deg);
+	transition: 400ms ease transform;
+}
+
+section#home .right-cont .mobile-wrapper:hover {
+	transform: rotate(15deg) scale(0.9);
+}
+
+section#home .right-cont .mobile-wrapper .camera {
+	position: absolute;
+	display: inline-block;
+	height: 24px;
+	aspect-ratio: 1 / 1;
+	background-color: #224;
+	border: none;
+	border-radius: 50%;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 9999999999999;
+}
+
+section#home .right-cont .mobile-wrapper .camera::before {
+	content: '';
+	position: absolute;
+	height: 5px;
+	aspect-ratio: 1 / 1;
+	background-color: var(--dark-border-clr);
+	border: none;
+	border-radius: 50%;
+	inset: 50% auto auto 50%;
+	transform: translate(-50%, -50%);
+}
+
+section#home .right-cont .mobile-wrapper .video {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5em;
+	line-height: 48px;
+	user-select: none;
+}
+
+section#home .right-cont .mobile-wrapper .video-overlay {
+	z-index: 999999;
+	background-color: var(--accent-clr-alpha);
+	position: absolute;
+	inset: 0 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+section#home .right-cont .mobile-wrapper .video-overlay i.bx {
+	font-size: 64px;
+	color: var(--font-alt-clr);
+	opacity: 0.8;
 }
