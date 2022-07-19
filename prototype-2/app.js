@@ -15,4 +15,4 @@ function scrollObserver() {
 	});
 }
 
-window.onscroll = scrollObserver;
+window.addEventListener('scroll', scrollObserver);
