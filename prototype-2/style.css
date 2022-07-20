@@ -465,6 +465,7 @@ section#pricing {
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	gap: 32px;
 }
 
 section#pricing h1.title {
@@ -513,9 +514,16 @@ section#pricing .plan-cont .plan {
     gap: 8px;
 }
 
+section#pricing .plan-cont .plan.a {
+	background: linear-gradient(45deg, var(--dark-clr) 90%, var(--accent-yellow) 10%);
+}
 
-section#pricing .plan-cont .plan.accent {
-    background: linear-gradient(45deg, var(--dark-clr) 90%, var(--accent-yellow) 10%);
+section#pricing .plan-cont .plan.a-plus {
+	background: linear-gradient(45deg, var(--dark-clr) 90%, var(--accent-green) 10%);
+}
+
+section#pricing .plan-cont .plan.a-plus-plus {
+    background: linear-gradient(45deg, var(--dark-clr) 90%, var(--accent-clr) 10%);
 }
 
 section#pricing .plan-cont .plan .top-cont .plan-name {
@@ -575,18 +583,18 @@ section#pricing .plan-cont .plan .bottom-cont .buy-btn {
     transition: 150ms ease-in-out border-color;
 }
 
-section#pricing .plan-cont .plan.accent .bottom-cont .buy-btn {
+section#pricing .plan-cont .plan.a-plus-plus .bottom-cont .buy-btn {
     border-color: transparent;
-    background-color: var(--accent-yellow);
+    background-color: var(--accent-clr);
     transition: 150ms ease-in-out filter;
     color: var(--dark-clr);
 }
 
-section#pricing .plan-cont .plan:not(.accent) .bottom-cont .buy-btn:hover {
-    border-color: var(--accent-yellow);
+section#pricing .plan-cont .plan:not(.a-plus-plus) .bottom-cont .buy-btn:hover {
+    border-color: var(--accent-clr);
 }
 
-section#pricing .plan-cont .plan.accent .bottom-cont .buy-btn:hover {
+section#pricing .plan-cont .plan.a-plus-plus .bottom-cont .buy-btn:hover {
     filter: brightness(0.85);
 }
 
