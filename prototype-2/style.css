@@ -140,6 +140,28 @@ section {
 	position: relative;
 }
 
+section > h1.title {
+	font-size: 2em;
+	font-weight: 400;
+	position: relative;
+}
+
+section > h1.title::before {
+	content: '';
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	bottom: 0;
+	background: linear-gradient(
+		to right,
+		var(--accent-clr),
+		var(--accent-green)
+	);
+	border: none;
+	border-radius: 2px;
+	animation: 3s hueRotate linear infinite;
+}
+
 section#home {
 	display: flex;
 	flex-direction: row;
@@ -304,27 +326,7 @@ section#why-us {
 	align-items: center;
 	padding: 64px 108px;
 	font-family: 'Poppins', sans-serif;
-	border: none;
-	border-radius: 24px;
 	gap: 28px;
-}
-
-section#why-us h1.title {
-	font-size: 2em;
-	font-weight: 400;
-	position: relative;
-}
-
-section#why-us h1.title::before {
-	content: '';
-	position: absolute;
-	height: 4px;
-	width: 100%;
-	bottom: 0;
-	background: linear-gradient(to right, var(--accent-clr), var(--accent-green));
-	border: none;
-	border-radius: 2px;
-	animation: 3s hueRotate linear infinite;
 }
 
 section#why-us .benefits-cont {
@@ -381,24 +383,6 @@ section#testimonials {
 	gap: 32px;
 	font-family: 'Poppins', sans-serif;
 	overflow: hidden;
-}
-
-section#testimonials h1.title {
-	font-size: 2em;
-	font-weight: 400;
-	position: relative;
-}
-
-section#testimonials h1.title::before {
-	content: '';
-	position: absolute;
-	height: 4px;
-	width: 100%;
-	bottom: 0;
-	background: linear-gradient(to right, var(--accent-clr), var(--accent-green));
-	border: none;
-	border-radius: 2px;
-	animation: 3s hueRotate linear infinite;
 }
 
 section#testimonials .card-cont {
@@ -468,24 +452,6 @@ section#pricing {
 	gap: 32px;
 }
 
-section#pricing h1.title {
-	font-size: 2em;
-	font-weight: 400;
-	position: relative;
-}
-
-section#pricing h1.title::before {
-	content: '';
-	position: absolute;
-	height: 4px;
-	width: 100%;
-	bottom: 0;
-	background: linear-gradient(to right, var(--accent-clr), var(--accent-green));
-	border: none;
-	border-radius: 2px;
-	animation: 3s hueRotate linear infinite;
-}
-
 section#pricing .plan-cont {
 	height: calc(100% - 24px);
 	width: 90%;
@@ -503,139 +469,335 @@ section#pricing .plan-cont {
 
 section#pricing .plan-cont .plan {
 	min-height: 275px;
-    min-width: 300px;
-    width: 20%;
-    background-color: var(--dark-clr);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+	min-width: 300px;
+	width: 20%;
+	background-color: var(--dark-clr);
+	padding: 12px 20px;
+	border: none;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
 
 section#pricing .plan-cont .plan.a {
-	background: linear-gradient(45deg, var(--dark-clr) 90%, var(--accent-yellow) 10%);
+	background: linear-gradient(
+		45deg,
+		var(--dark-clr) 90%,
+		var(--accent-yellow) 10%
+	);
 }
 
 section#pricing .plan-cont .plan.a-plus {
-	background: linear-gradient(45deg, var(--dark-clr) 90%, var(--accent-green) 10%);
+	background: linear-gradient(
+		45deg,
+		var(--dark-clr) 90%,
+		var(--accent-green) 10%
+	);
 }
 
 section#pricing .plan-cont .plan.a-plus-plus {
-    background: linear-gradient(45deg, var(--dark-clr) 90%, var(--accent-clr) 10%);
+	background: linear-gradient(
+		45deg,
+		var(--dark-clr) 90%,
+		var(--accent-clr) 10%
+	);
 }
 
 section#pricing .plan-cont .plan .top-cont .plan-name {
-    font-weight: 400;
-    font-size: 24px;
-    user-select: none;
+	font-weight: 400;
+	font-size: 24px;
+	user-select: none;
 }
 
 section#pricing .plan-cont .plan .center-cont {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 5px 0;
 }
 
 section#pricing .plan-cont .plan .center-cont .item {
-    /* background-color: blueviolet; */
-    position: relative;
-    display: flex;
+	/* background-color: blueviolet; */
+	position: relative;
+	display: flex;
 }
 
 section#pricing .plan-cont .plan .center-cont .item i {
-    color: var(--accent-green);
-    /* font-size: 28px; */
-    line-height: 28px;
-    width: 28px;
-    text-align: center;
-    font-size: 24px;
-    display: inline-block;
-    /* background-color: chartreuse; */
+	color: var(--accent-green);
+	/* font-size: 28px; */
+	line-height: 28px;
+	width: 28px;
+	text-align: center;
+	font-size: 24px;
+	display: inline-block;
+	/* background-color: chartreuse; */
 }
 
 section#pricing .plan-cont .plan .center-cont .item .desc {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 28px;
-    font-size: 16px;
-    user-select: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 28px;
+	font-size: 16px;
+	user-select: none;
 }
 
 section#pricing .plan-cont .plan .bottom-cont {
-    margin-top: auto;
-    margin-bottom: 8px;
+	margin-top: auto;
+	margin-bottom: 8px;
 }
 
 section#pricing .plan-cont .plan .bottom-cont .buy-btn {
-    cursor: pointer;
-    display: block;
-    user-select: none;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 42px;
-    border: 2px solid var(--font-alt-clr);
-    border-radius: 12px;
-    transition: 150ms ease-in-out border-color;
+	cursor: pointer;
+	display: block;
+	user-select: none;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	line-height: 42px;
+	border: 2px solid var(--font-alt-clr);
+	border-radius: 12px;
+	transition: 150ms ease-in-out border-color;
 }
 
 section#pricing .plan-cont .plan.a-plus-plus .bottom-cont .buy-btn {
-    border-color: transparent;
-    background-color: var(--accent-clr);
-    transition: 150ms ease-in-out filter;
-    color: var(--dark-clr);
+	border-color: transparent;
+	background-color: var(--accent-clr);
+	transition: 150ms ease-in-out filter;
+	color: var(--dark-clr);
 }
 
 section#pricing .plan-cont .plan:not(.a-plus-plus) .bottom-cont .buy-btn:hover {
-    border-color: var(--accent-clr);
+	border-color: var(--accent-clr);
 }
 
 section#pricing .plan-cont .plan.a-plus-plus .bottom-cont .buy-btn:hover {
-    filter: brightness(0.85);
+	filter: brightness(0.85);
+}
+
+/* Completed Pricing Starting section services */
+
+section#services {
+	position: relative;
+	background-image: url(./src/services_image.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/* Completed Section services. Starting Section Contact Us */
+
+section#contact-us {
+	font-family: 'Poppins', sans-serif;
+	padding: 64px 108px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 28px;
+	height: 100%;
+	width: 100%;
+}
+
+section#contact-us .wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	gap: 32px;
+	width: 100%;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+section#contact-us .wrapper .left-cont {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+section#contact-us .wrapper .left-cont .cont {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	border: none;
+	border-radius: 12px;
+	background-color: var(--dark-accent-clr);
+	padding: 20px 28px;
+	width: 300px;
+}
+
+section#contact-us .wrapper .left-cont .cont i.bx {
+	font-size: 32px;
+	line-height: 48px;
+	height: 48px;
+	width: 48px;
+	color: var(--dark-clr);
+	text-align: center;
+	background-color: var(--accent-clr);
+	border: none;
+	border-radius: 50%;
+}
+
+section#contact-us .wrapper .left-cont .cont h2 {
+	font-weight: 500;
+	font-size: 1.15em;
+}
+
+section#contact-us .wrapper .left-cont .cont h3 {
+	font-weight: 400;
+	font-size: 1em;
+}
+
+section#contact-us .wrapper .left-cont .cont address {
+	font-size: 0.9em;
+}
+
+section#contact-us .wrapper .right-cont {
+	margin: 0;
+}
+
+section#contact-us .wrapper .right-cont form {
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	background-color: var(--dark-accent-clr);
+	border: none;
+	border-radius: 16px;
+}
+
+section#contact-us .wrapper .right-cont form input {
+	outline: none;
+	border: none;
+	background-color: var(--dark-border-clr);
+	font-size: 1em;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 8px;
+	color: var(--font-clr);
+	height: 100%;
+	width: 100%;
+}
+
+section#contact-us .wrapper .right-cont form div {
+	width: 100%;
+}
+
+section#contact-us .wrapper .right-cont form .top-bar {
+	background-color: var(--dark-border-clr);
+	padding: 12px;
+	width: 100%;
+	border: none;
+	border-radius: 16px;
+	display: flex;
+	flex-direction: rowsection#contact-us .wrapper .right-cont form .message-area textarea;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section#contact-us .wrapper .right-cont form .top-bar span.btn {
+	padding: 5px 8px;
+	font-weight: 500;
+	font-size: 16px;
+	user-select: none;
+	color: var(--dark-clr);
+	background-color: var(--accent-clr);
+	border: none;
+	border-radius: 8px;
+	transition: 200ms ease background-color;
+	cursor: pointer;
+}
+
+section#contact-us .wrapper .right-cont form .top-bar span.btn:hover {
+	background-color: var(--accent-hov-clr);
+}
+
+section#contact-us .wrapper .right-cont form .top-bar h4 {
+	font-size: 1em;
+	font-weight: 500;
+}
+
+section#contact-us .wrapper .right-cont form .name-cont,
+section#contact-us .wrapper .right-cont form .email-cont {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	padding: 0 24px;
+}
+
+section#contact-us .wrapper .right-cont form input::placeholder {
+	font-size: 1em;
+	color: var(--font-alt-clr);
+}
+
+section#contact-us .wrapper .right-cont form .message-area {
+	padding: 0 24px;
+	flex: 1 1 100%;
+	display: flex;
+}
+
+section#contact-us .wrapper .right-cont form .message-area textarea {
+	resize: none;
+	outline: none;
+	background-color: var(--dark-border-clr);
+	padding: 12px 20px;
+	border: none;
+	border-radius: 8px;
+	color: var(--font-clr);
+	font-family: 'Poppins', sans-serif;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-size: 1em;
+}
+
+section#contact-us .wrapper .right-cont form .message-area textarea::placeholder {
+	color: var(--font-alt-clr);
+	font-family: 'Poppins', sans-serif;
+	font-size: 1em;
 }
 
 @media screen and (max-width: 1230px) {
-	section#home .right-cont {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 1080px) {
 	section {
 		min-height: 80vh;
 		font-size: 28px;
 	}
-	
-	section#home {
-		height: 80vh;
-		min-height: 80vh;;
+
+	section#home .right-cont {
+		display: none;
 	}
-	
+
 	section#home .left-cont {
 		align-items: center;
 		justify-content: center;
 	}
-	
+
 	section#home .left-cont h1.title {
 		margin: auto;
 	}
-	
+
 	section#why-us {
 		padding: 0px 32px;
 	}
-	
+
 	section#why-us .benefits-cont .benefit {
 		max-width: 375px;
 		width: 100%;
 		margin: 0;
 		height: 100%;
 	}
+
 	section#why-us .benefits-cont .benefit i.bx {
 		font-size: 48px;
+	}
+
+	section#contact-us {
+		height: 100vh;
 	}
 }
 
