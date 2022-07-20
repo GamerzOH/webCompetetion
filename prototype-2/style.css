@@ -695,7 +695,7 @@ section#contact-us .wrapper .right-cont form .top-bar {
 	border: none;
 	border-radius: 16px;
 	display: flex;
-	flex-direction: rowsection#contact-us .wrapper .right-cont form .message-area textarea;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
