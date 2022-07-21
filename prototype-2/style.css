@@ -171,6 +171,8 @@ section#home {
 	gap: 50px;
 	padding: 120px;
 	background-color: var(--dark-clr);
+	min-height: 75vh;
+	height: 75vh;
 }
 
 section#home .left-cont {
@@ -798,7 +800,7 @@ section#achievements .achiever-cont .card {
 	width: 100%;
 	border: none;
 	border-radius: 16px;
-	min-height: 200px;
+	min-height: 300px;
 	height: 100%;
 }
 
@@ -816,7 +818,7 @@ section#achievements .achiever-cont .card::before {
 section#achievements .achiever-cont .card h2 {
 	font-size: 1.5em;
 	font-weight: 500;
-	padding-top: 24px;
+	padding-top: 20px;
 	z-index: 9999;
 	color: var(--dark-clr);
 }
@@ -891,6 +893,7 @@ section#achievements .achiever-cont .card .desc {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		width: auto;
 	}
 
 	section#contact-us .wrapper .right-cont {
