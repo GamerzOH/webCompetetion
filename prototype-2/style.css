@@ -586,6 +586,15 @@ section#services {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: fit-content;
+}
+
+section#services img {
+	display: none;
+	height: 100%;
 }
 
 /* Completed Section services. Starting Section Contact Us */
@@ -909,6 +918,14 @@ section#achievements .achiever-cont .card .desc {
 
 	section#achievements .achiever-cont .card {
 		height: 300px;
+	}
+
+	section#services {
+		background-image: none;
+	}
+
+	section#services img {
+		display: block;
 	}
 }
 
